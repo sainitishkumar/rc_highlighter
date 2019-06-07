@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Rosetta Code Highlighter",
+  "short_name":"rc_highlight",
+  "description": "marks a question if finished",
+  "version": "2",
+  "author": "saiNitish",
+  "browser_action": {
+    "default_title": "rc_highlight",
+    "default_popup":"popup.html"
+  },
+  "content_scripts":[
+    {
+      "matches":["http://www.rosettacode.org/wiki/Category:Programming_Tasks"],
+      "js":["content.js"]
+    }
+  ],
+  "permissions": ["tabs","webNavigation","activeTab","http://www.rosettacode.org/*/*/*/","storage"]
+}
