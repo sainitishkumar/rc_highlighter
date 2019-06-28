@@ -35,9 +35,10 @@ window.addEventListener('DOMContentLoaded', function(){
 	fin.onclick  = insertFIN;
 	chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
     	var url = tabs[0].url;
-    	console.log(url);
-    	main_url = "http://www.rosettacode.org/wiki/Category:Programming_Tasks"
-    	if(url!=main_url && url.includes("http://www.rosettacode.org/")){
+    	console.log(url,url.includes("rosettacode.org"));
+		main_url = "http://rosettacode.org/wiki/Category:Programming_Tasks"
+    	if(url!=main_url && url.includes("rosettacode.org")) {
+			console.log("INSIDE")
     		url_main = url;
     		fin.disabled = false;
     		todo.disabled = false;

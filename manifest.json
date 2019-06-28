@@ -11,9 +11,9 @@
   },
   "content_scripts":[
     {
-      "matches":["http://www.rosettacode.org/wiki/Category:Programming_Tasks"],
+      "matches":["http://rosettacode.org/wiki/Category:Programming_Tasks"],
       "js":["content.js"]
     }
   ],
-  "permissions": ["tabs","webNavigation","activeTab","http://www.rosettacode.org/*/*/*/","storage"]
+  "permissions": ["tabs","webNavigation","activeTab","http://rosettacode.org/*/*/*/","storage"]
 }
